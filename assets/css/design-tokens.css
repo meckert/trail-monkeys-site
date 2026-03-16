@@ -61,7 +61,7 @@
 
   /* --- Layout --- */
   --max-width:       1200px;
-  --nav-height:      220px;
+  --nav-height:      72px;
   --section-padding: var(--space-16) var(--space-6);
 
   /* --- Borders --- */
