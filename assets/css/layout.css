@@ -155,7 +155,7 @@
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--color-hero-fallback);
   overflow: hidden;
 }
@@ -193,14 +193,14 @@
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-16);
+  padding: calc(var(--nav-height) + 100px) var(--space-6) var(--space-16);
 }
 
 .hero-logo {
   margin-bottom: var(--space-4);
 }
 .hero-logo img {
-  height: 400px;
+  height: 300px;
   width: auto;
   filter: drop-shadow(0 4px 20px rgba(0,0,0,0.6));
 }
