@@ -129,18 +129,18 @@
     gap: var(--space-1);
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  #nav-toggle:checked ~ .nav-inner .nav-links {
+  #nav-toggle:checked ~ .site-header .nav-links {
     display: flex;
   }
 
   /* Animate hamburger to X when open */
-  #nav-toggle:checked ~ .nav-inner .nav-toggle-label span:nth-child(1) {
+  #nav-toggle:checked ~ .site-header .nav-toggle-label span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
-  #nav-toggle:checked ~ .nav-inner .nav-toggle-label span:nth-child(2) {
+  #nav-toggle:checked ~ .site-header .nav-toggle-label span:nth-child(2) {
     opacity: 0;
   }
-  #nav-toggle:checked ~ .nav-inner .nav-toggle-label span:nth-child(3) {
+  #nav-toggle:checked ~ .site-header .nav-toggle-label span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
 
