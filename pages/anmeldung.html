@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anmeldung – Trail Monkeys Rosenheim</title>
+  <meta name="description" content="Jetzt für das Mountainbike-Training der Trail Monkeys Rosenheim anmelden. Zwei kostenlose Schnupperstunden für Kinder von 4 bis 12 Jahren.">
+
+  <link rel="stylesheet" href="../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+  <input type="checkbox" id="nav-toggle" aria-hidden="true">
+
+  <!-- ====== HEADER / NAV ====== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <a class="nav-logo" href="../index.html" aria-label="Trail Monkeys Rosenheim – Startseite">
+        <img src="../assets/img/trail-monkeys-logo-transparent.png"
+             alt="Trail Monkeys Rosenheim Logo"
+             width="48" height="48">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Die Trail Monkeys</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="anmeldung.html" aria-current="page">Anmeldung</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <a class="nav-tsv-badge" href="https://tsv1860rosenheim.de/" target="_blank" rel="noopener"
+         aria-label="TSV 1860 Rosenheim e.V. (öffnet in neuem Tab)">
+        <span style="color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid rgba(255,255,255,0.3); padding: 4px 8px; border-radius: 4px;">TSV<br>1860</span>
+      </a>
+
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span><span></span><span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- ====== PAGE HERO ====== -->
+  <div class="page-hero">
+    <h1>Anmeldung</h1>
+    <p>Zwei Schnupperstunden kostenfrei – einfach Formular ausfüllen und loslegen.</p>
+  </div>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="anmeldung-heading">
+      <div class="container" style="max-width: 860px;">
+
+        <h2 id="anmeldung-heading" class="sr-only">Anmeldeformular</h2>
+
+        <!-- Info before form -->
+        <div class="info-box" style="margin-bottom: var(--space-8);">
+          <h4>Vor der Anmeldung</h4>
+          <ul>
+            <li>Kinder zwischen <strong>4 und 12 Jahren</strong> können sich anmelden.</li>
+            <li><strong>Zwei Schnupperstunden</strong> sind vollständig kostenfrei – danach greifen die regulären Monatsbeiträge.</li>
+            <li>Nach dem Absenden des Formulars melden sich die Trainer direkt bei euch.</li>
+            <li>Aktuelle Trainingszeiten und Treffpunkt findet ihr auf der <a href="training.html">Trainingsseite</a>.</li>
+          </ul>
+        </div>
+
+        <!-- Google Form embed -->
+        <div class="form-wrapper">
+          <!--
+            TODO: Replace the src with the real Google Form URL.
+            Format: https://docs.google.com/forms/d/e/[FORM_ID]/viewform?embedded=true
+          -->
+          <iframe
+            src="https://docs.google.com/forms/d/e/REPLACE_WITH_REAL_FORM_ID/viewform?embedded=true"
+            title="Anmeldeformular Trail Monkeys Rosenheim"
+            allowfullscreen
+            loading="lazy"
+            aria-label="Anmeldeformular (Google Forms)"
+            style="display:block;">
+            Dein Browser unterstützt keine eingebetteten Formulare.
+          </iframe>
+
+          <!-- Fallback link directly below iframe -->
+          <div class="form-fallback" role="note">
+            <p>
+              Formular nicht sichtbar?
+              <!-- TODO: insert real Google Form direct URL below -->
+              <a href="https://docs.google.com/forms/d/e/REPLACE_WITH_REAL_FORM_ID/viewform"
+                 target="_blank" rel="noopener">
+                Formular direkt in Google Forms öffnen ↗
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Privacy note (required for GDPR / German law) -->
+        <p class="form-privacy-note" role="note">
+          <strong>Datenschutzhinweis:</strong>
+          Die Anmeldung erfolgt über Google Forms; personenbezogene Daten werden laut unserer
+          <a href="#" title="TODO: Link zur Datenschutzerklärung einfügen">Datenschutzerklärung</a>
+          verarbeitet. Google Forms kann Daten auf Servern außerhalb der EU speichern.
+          Weitere Informationen findest du in der
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.
+        </p>
+
+        <!-- Contact fallback -->
+        <div style="margin-top: var(--space-10); text-align: center;">
+          <p>Oder meldet euch direkt per E-Mail bei unseren Trainern:</p>
+          <p style="margin-top: var(--space-3);">
+            <a href="mailto:jonas.droste@gmx.de" class="btn btn-outline" style="margin: var(--space-2);">
+              <span aria-hidden="true">✉️</span> jonas.droste@gmx.de
+            </a>
+            <a href="mailto:andyrieger@me.com" class="btn btn-outline" style="margin: var(--space-2);">
+              <span aria-hidden="true">✉️</span> andyrieger@me.com
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== SUPPORTERS BAR ====== -->
+  <section class="supporters-bar" aria-label="Unsere Unterstützer">
+    <div class="container">
+      <p class="supporters-label">Mit freundlicher Unterstützung von</p>
+      <div class="supporters-grid">
+        <a class="supporter-item" href="https://www.sparkasse-ros.de" target="_blank" rel="noopener"
+           aria-label="Sparkasse Rosenheim-Bad Aibling">
+          <img src="../assets/img/sparkasse.png" alt="Sparkasse Rosenheim-Bad Aibling">
+        </a>
+        <a class="supporter-item" href="https://www.rosenheim.de" target="_blank" rel="noopener"
+           aria-label="Stadt Rosenheim">
+          <img src="../assets/img/stadt-rosenheim.png" alt="Stadt Rosenheim">
+        </a>
+        <a class="supporter-item" href="https://www.kommit.bike" target="_blank" rel="noopener"
+           aria-label="Kommit – ride together">
+          <img src="../assets/img/kommit.png" alt="Kommit – ride together">
+        </a>
+        <a class="supporter-item" href="https://www.bikepark-samerberg.de" target="_blank" rel="noopener"
+           aria-label="Bikepark Samerberg">
+          <img src="../assets/img/bikepark-samerberg.jpg" alt="Bikepark Samerberg">
+        </a>
+        <a class="supporter-item" href="#" target="_blank" rel="noopener"
+           aria-label="Happy Trails">
+          <img src="../assets/img/happy-trails.png" alt="Happy Trails">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="../index.html">Startseite</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="anmeldung.html">Anmeldung</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#" title="TODO: Datenschutzerklärung einfügen">Datenschutz</a></li>
+          <li><a href="#" title="TODO: Impressum einfügen">Impressum</a></li>
+          <li>
+            <a href="https://www.instagram.com/trailmonkeys.rosenheim"
+               target="_blank" rel="noopener"
+               aria-label="Instagram @trailmonkeys.rosenheim (öffnet in neuem Tab)">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer-copy">
+        &copy; Trail Monkeys Rosenheim &middot;
+        <a href="https://www.trendsport-rosenheim.de" target="_blank" rel="noopener"
+           style="color: rgba(255,255,255,0.45);">Trendsport TSV 1860 Rosenheim e.V.</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

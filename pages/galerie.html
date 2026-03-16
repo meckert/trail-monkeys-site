@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie – Trail Monkeys Rosenheim</title>
+  <meta name="description" content="Fotos und Impressionen vom Mountainbike-Training der Trail Monkeys Rosenheim am Dirtpark und im Käferwald.">
+
+  <link rel="stylesheet" href="../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+  <input type="checkbox" id="nav-toggle" aria-hidden="true">
+
+  <!-- ====== HEADER / NAV ====== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <a class="nav-logo" href="../index.html" aria-label="Trail Monkeys Rosenheim – Startseite">
+        <img src="../assets/img/trail-monkeys-logo-transparent.png"
+             alt="Trail Monkeys Rosenheim Logo"
+             width="48" height="48">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Die Trail Monkeys</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="anmeldung.html">Anmeldung</a></li>
+        <li><a href="galerie.html" aria-current="page">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <a class="nav-tsv-badge" href="https://tsv1860rosenheim.de/" target="_blank" rel="noopener"
+         aria-label="TSV 1860 Rosenheim e.V. (öffnet in neuem Tab)">
+        <span style="color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid rgba(255,255,255,0.3); padding: 4px 8px; border-radius: 4px;">TSV<br>1860</span>
+      </a>
+
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span><span></span><span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- ====== PAGE HERO ====== -->
+  <div class="page-hero">
+    <h1>Galerie</h1>
+    <p>Impressionen vom Training, vom Dirtpark und aus dem Käferwald.</p>
+  </div>
+
+  <!-- ====== LIGHTBOX OVERLAY ====== -->
+  <!-- role="dialog" and aria-modal for screen readers; closed by default -->
+  <div class="lightbox-overlay"
+       id="lightbox"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Bildansicht"
+       aria-hidden="true">
+    <div class="lightbox-inner">
+      <!-- Close button -->
+      <button class="lightbox-close"
+              id="lightbox-close"
+              aria-label="Bild schließen (ESC)"
+              type="button">
+        &times;
+      </button>
+
+      <!-- Full-size image -->
+      <img class="lightbox-img"
+           id="lightbox-img"
+           src=""
+           alt=""
+           loading="lazy">
+
+      <!-- Caption -->
+      <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
+
+      <!-- Navigation -->
+      <div class="lightbox-nav">
+        <button class="lightbox-btn" id="lightbox-prev" type="button" aria-label="Vorheriges Bild">&#8592; Zurück</button>
+        <span class="lightbox-counter" id="lightbox-counter" aria-live="polite"></span>
+        <button class="lightbox-btn" id="lightbox-next" type="button" aria-label="Nächstes Bild">Weiter &#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="container">
+
+        <h2 id="gallery-heading" class="sr-only">Fotos</h2>
+
+        <!-- TODO: Replace placeholder tiles with real photos.
+             Add image files to /assets/img/ and update src/srcset attributes.
+             Use <picture> with webp + jpg fallback for each item.
+             Recommended size: ~800×600px (4:3 ratio) for thumbnails,
+             full-res (1200×900px) for lightbox src.
+        -->
+
+        <div class="gallery-grid" id="gallery-grid" role="list">
+
+          <!-- Placeholder tile template — repeat and replace for real photos -->
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 1 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 1 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 1 einfügen<br><small>assets/img/ verwenden</small></p>
+            </div>
+            <!--
+              Replace the placeholder div above with a real <picture> element:
+              <picture>
+                <source srcset="../assets/img/foto-01.webp" type="image/webp">
+                <img src="../assets/img/foto-01.jpg"
+                     alt="Beschreibung des Fotos"
+                     loading="lazy"
+                     class="img-responsive">
+              </picture>
+            -->
+          </figure>
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 2 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 2 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 2 einfügen</p>
+            </div>
+          </figure>
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 3 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 3 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 3 einfügen</p>
+            </div>
+          </figure>
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 4 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 4 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 4 einfügen</p>
+            </div>
+          </figure>
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 5 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 5 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 5 einfügen</p>
+            </div>
+          </figure>
+
+          <figure class="gallery-item"
+                  role="listitem"
+                  tabindex="0"
+                  data-full="assets/img/gallery-placeholder.jpg"
+                  data-caption="Foto 6 – Trail Monkeys Rosenheim"
+                  aria-label="Bild 6 öffnen">
+            <div class="gallery-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p>TODO: Foto 6 einfügen</p>
+            </div>
+          </figure>
+
+        </div><!-- .gallery-grid -->
+
+        <p style="margin-top: var(--space-8); text-align: center; color: var(--color-text-muted); font-size: var(--text-sm);">
+          <span class="todo-badge">TODO</span>
+          Bilder in <code>assets/img/</code> ablegen und die Platzhalterkacheln ersetzen.
+          Folgt uns auf
+          <a href="https://www.instagram.com/trailmonkeys.rosenheim" target="_blank" rel="noopener">
+            Instagram @trailmonkeys.rosenheim
+          </a>
+          für aktuelle Fotos.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== SUPPORTERS BAR ====== -->
+  <section class="supporters-bar" aria-label="Unsere Unterstützer">
+    <div class="container">
+      <p class="supporters-label">Mit freundlicher Unterstützung von</p>
+      <div class="supporters-grid">
+        <a class="supporter-item" href="https://www.sparkasse-ros.de" target="_blank" rel="noopener"
+           aria-label="Sparkasse Rosenheim-Bad Aibling">
+          <img src="../assets/img/sparkasse.png" alt="Sparkasse Rosenheim-Bad Aibling">
+        </a>
+        <a class="supporter-item" href="https://www.rosenheim.de" target="_blank" rel="noopener"
+           aria-label="Stadt Rosenheim">
+          <img src="../assets/img/stadt-rosenheim.png" alt="Stadt Rosenheim">
+        </a>
+        <a class="supporter-item" href="https://www.kommit.bike" target="_blank" rel="noopener"
+           aria-label="Kommit – ride together">
+          <img src="../assets/img/kommit.png" alt="Kommit – ride together">
+        </a>
+        <a class="supporter-item" href="https://www.bikepark-samerberg.de" target="_blank" rel="noopener"
+           aria-label="Bikepark Samerberg">
+          <img src="../assets/img/bikepark-samerberg.jpg" alt="Bikepark Samerberg">
+        </a>
+        <a class="supporter-item" href="#" target="_blank" rel="noopener"
+           aria-label="Happy Trails">
+          <img src="../assets/img/happy-trails.png" alt="Happy Trails">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="../index.html">Startseite</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="anmeldung.html">Anmeldung</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#" title="TODO: Datenschutzerklärung einfügen">Datenschutz</a></li>
+          <li><a href="#" title="TODO: Impressum einfügen">Impressum</a></li>
+          <li>
+            <a href="https://www.instagram.com/trailmonkeys.rosenheim"
+               target="_blank" rel="noopener"
+               aria-label="Instagram @trailmonkeys.rosenheim (öffnet in neuem Tab)">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer-copy">
+        &copy; Trail Monkeys Rosenheim &middot;
+        <a href="https://www.trendsport-rosenheim.de" target="_blank" rel="noopener"
+           style="color: rgba(255,255,255,0.45);">Trendsport TSV 1860 Rosenheim e.V.</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ====== LIGHTBOX JS (inline, ~4 KB) ====== -->
+  <script>
+    (function () {
+      'use strict';
+
+      var overlay   = document.getElementById('lightbox');
+      var imgEl     = document.getElementById('lightbox-img');
+      var caption   = document.getElementById('lightbox-caption');
+      var counter   = document.getElementById('lightbox-counter');
+      var closeBtn  = document.getElementById('lightbox-close');
+      var prevBtn   = document.getElementById('lightbox-prev');
+      var nextBtn   = document.getElementById('lightbox-next');
+      var grid      = document.getElementById('gallery-grid');
+
+      var items     = [];  // array of {full, caption, el}
+      var current   = 0;
+      var lastFocus = null;
+
+      // Collect all gallery items
+      function buildIndex() {
+        var figures = grid.querySelectorAll('.gallery-item');
+        items = Array.prototype.map.call(figures, function (fig) {
+          return {
+            full:    fig.dataset.full    || '',
+            caption: fig.dataset.caption || '',
+            el:      fig
+          };
+        });
+      }
+
+      function show(index) {
+        if (!items.length) return;
+        current = (index + items.length) % items.length;
+        var item = items[current];
+
+        imgEl.src     = item.full;
+        imgEl.alt     = item.caption || ('Bild ' + (current + 1));
+        caption.textContent = item.caption || '';
+        counter.textContent = (current + 1) + ' / ' + items.length;
+      }
+
+      function open(index) {
+        lastFocus = document.activeElement;
+        buildIndex();
+        show(index);
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        // Move focus into lightbox
+        closeBtn.focus();
+      }
+
+      function close() {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        imgEl.src = '';
+        // Restore focus to trigger element
+        if (lastFocus) lastFocus.focus();
+      }
+
+      // Open lightbox when gallery item is clicked or activated
+      grid.addEventListener('click', function (e) {
+        var fig = e.target.closest('.gallery-item');
+        if (!fig) return;
+        buildIndex();
+        var idx = items.findIndex(function (item) { return item.el === fig; });
+        if (idx > -1) open(idx);
+      });
+
+      // Keyboard: Enter/Space on gallery items
+      grid.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var fig = e.target.closest('.gallery-item');
+        if (!fig) return;
+        e.preventDefault();
+        buildIndex();
+        var idx = items.findIndex(function (item) { return item.el === fig; });
+        if (idx > -1) open(idx);
+      });
+
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', function () { show(current - 1); });
+      nextBtn.addEventListener('click', function () { show(current + 1); });
+
+      // Close on overlay backdrop click (not inner content)
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) close();
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape')      { e.preventDefault(); close(); }
+        if (e.key === 'ArrowLeft')   { e.preventDefault(); show(current - 1); }
+        if (e.key === 'ArrowRight')  { e.preventDefault(); show(current + 1); }
+      });
+
+      // Trap focus inside lightbox while open
+      overlay.addEventListener('keydown', function (e) {
+        if (e.key !== 'Tab') return;
+        var focusable = overlay.querySelectorAll(
+          'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        var first = focusable[0];
+        var last  = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+        }
+      });
+
+    }());
+  </script>
+
+</body>
+</html>

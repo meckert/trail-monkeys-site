@@ -1,0 +1,81 @@
+/* ============================================================
+   design-tokens.css — Trail Monkeys Rosenheim
+   Central design tokens. Import this file first.
+   ============================================================ */
+
+:root {
+  /* --- Colors --- */
+  --color-primary:        #D2232A;          /* TSV red — primary CTAs */
+  --color-primary-hover:  #b01e22;
+  --color-secondary:      #1F6F3E;          /* trail green — secondary CTAs */
+  --color-secondary-hover:#175e33;
+  --color-dark:           #1a1a1a;          /* nav, overlays */
+  --color-dark-mid:       #2c2c2c;
+  --color-light:          #f5f5f5;
+  --color-white:          #ffffff;
+  --color-text:           #1a1a1a;
+  --color-text-muted:     #555555;
+  --color-border:         #dddddd;
+  --color-overlay:        rgba(0, 0, 0, 0.50); /* hero dark overlay */
+  --color-hero-fallback:  #1a1a1a;          /* shown if hero image missing */
+
+  /* --- Typography --- */
+  /* TODO: replace system stack with licensed woff2 files in /assets/fonts/
+     and update @font-face declarations in base.css */
+  --font-heading: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-body:    system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-mono:    'Menlo', 'Consolas', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold:   700;
+  --fw-black:  900;
+
+  --leading-tight:  1.2;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+
+  /* --- Spacing --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Layout --- */
+  --max-width:       1200px;
+  --nav-height:      220px;
+  --section-padding: var(--space-16) var(--space-6);
+
+  /* --- Borders --- */
+  --radius-sm: 4px;
+  --radius:    6px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow:    0 2px 8px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.18);
+
+  /* --- Transitions --- */
+  --transition: 150ms ease;
+  --transition-slow: 300ms ease;
+}

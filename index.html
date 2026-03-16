@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trail Monkeys Rosenheim – Mountainbike Training für Kinder</title>
+  <meta name="description" content="Spielerisch Mountainbike fahren lernen – für Kinder von 4 bis 12 Jahren. Trail Monkeys Rosenheim beim TSV 1860 Rosenheim.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trail Monkeys Rosenheim – Mountainbike Training für Kinder">
+  <meta property="og:description" content="Spielerisch Mountainbike fahren lernen – für Kinder von 4 bis 12 Jahren.">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Styles (loaded in dependency order) -->
+  <link rel="stylesheet" href="assets/css/design-tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "Trail Monkeys Rosenheim",
+    "description": "Mountainbike Training für Kinder von 4 bis 12 Jahren in Rosenheim",
+    "url": "https://trail-monkeys-rosenheim.de",
+    "logo": "assets/img/trail-monkeys-logo-transparent.png",
+    "sameAs": ["https://www.instagram.com/trailmonkeys.rosenheim"],
+    "parentOrganization": {
+      "@type": "SportsOrganization",
+      "name": "Trendsport TSV 1860 Rosenheim e.V.",
+      "telephone": "+498031 12639",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jahnstraße 25",
+        "addressLocality": "Rosenheim",
+        "postalCode": "83022",
+        "addressCountry": "DE"
+      }
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Dirtpark Rosenheim",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lortzingstraße 15",
+        "addressLocality": "Rosenheim",
+        "postalCode": "83024",
+        "addressCountry": "DE"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip navigation link for screen readers -->
+  <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+
+  <!-- Hamburger toggle (CSS-only, must precede header) -->
+  <input type="checkbox" id="nav-toggle" aria-hidden="true">
+
+  <!-- ====== HEADER / NAV ====== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <a class="nav-logo" href="index.html" aria-label="Trail Monkeys Rosenheim – Startseite">
+        <img src="assets/img/trail-monkeys-logo-transparent.png"
+             alt="Trail Monkeys Rosenheim Logo"
+             width="48" height="48">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" aria-current="page">Die Trail Monkeys</a></li>
+        <li><a href="pages/training.html">Training</a></li>
+        <li><a href="pages/team.html">Team</a></li>
+        <li><a href="pages/anmeldung.html">Anmeldung</a></li>
+        <li><a href="pages/galerie.html">Galerie</a></li>
+        <li><a href="pages/kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <!-- TSV logo badge -->
+      <a class="nav-tsv-badge" href="https://tsv1860rosenheim.de/" target="_blank" rel="noopener"
+         aria-label="TSV 1860 Rosenheim e.V. (öffnet in neuem Tab)">
+        <span style="color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid rgba(255,255,255,0.3); padding: 4px 8px; border-radius: 4px;">TSV<br>1860</span>
+      </a>
+
+      <!-- Mobile hamburger button -->
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" aria-label="Willkommen bei den Trail Monkeys">
+
+    <div class="hero-bg" aria-hidden="true">
+      <img src="assets/img/hero.png" alt="">
+    </div>
+
+    <div class="hero-content">
+      <h1>Trail Monkeys Rosenheim</h1>
+      <p class="hero-subtitle">Mountainbike Training für Kinder</p>
+      <p class="hero-tagline">Spielerisch Mountainbike fahren lernen – für Kinder von 4 bis 12 Jahren.</p>
+
+      <div class="hero-ctas">
+        <a href="pages/anmeldung.html" class="btn btn-primary">
+          <span class="btn-icon" aria-hidden="true">🚲</span>
+          Jetzt anmelden
+        </a>
+        <a href="pages/training.html" class="btn btn-secondary">
+          <span class="btn-icon" aria-hidden="true">📅</span>
+          Trainingszeiten
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <!-- Was sind die Trail Monkeys? -->
+    <section class="section section-intro" aria-labelledby="intro-heading">
+      <div class="container">
+        <h2 id="intro-heading">Was sind die Trail Monkeys?</h2>
+
+        <p>
+          Die Trail Monkeys sind das Mountainbike-Trainingsprogramm von
+          <strong>Trendsport TSV 1860 Rosenheim e.V.</strong> Wir bringen Kindern von
+          <strong>4 bis 12 Jahren</strong> das Mountainbiken spielerisch und sicher bei –
+          auf dem Dirtpark Rosenheim und den Trails im Käferwald. Unsere erfahrenen Trainer
+          Jonas und Andy begleiten jedes Kind auf seinem eigenen Niveau.
+          Die Saison läuft von <strong>April bis Oktober</strong>.
+        </p>
+
+        <p>
+          Die Trail Monkeys sind Teil von <a href="https://www.trendsport-rosenheim.de" target="_blank" rel="noopener">Trendsport TSV 1860 Rosenheim</a>,
+          dem Verein für Trendsportarten in Rosenheim – Mountainbike, Skateboard, Bouldern und mehr.
+          Im Verein sind Kinder bestens aufgehoben: mit professionellem Training, tollem
+          Gemeinschaftsgefühl und viel Spaß auf zwei Rädern.
+        </p>
+      </div>
+    </section>
+
+    <!-- Feature highlights -->
+    <section class="section section--alt" aria-labelledby="highlights-heading">
+      <div class="container">
+        <h2 id="highlights-heading">Warum Trail Monkeys?</h2>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🏔️</div>
+            <h3>Spielerisch lernen</h3>
+            <p>Kinder zwischen 4 und 12 Jahren lernen in altersgerechten Gruppen – Schritt für Schritt, mit Spaß und ohne Druck.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🪖</div>
+            <h3>Sicherheit zuerst</h3>
+            <p>Erfahrene Trainer sorgen für eine sichere Lernumgebung. Helm ist Pflicht – und immer im Kurs dabei.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🌳</div>
+            <h3>Natur pur</h3>
+            <p>Training am Dirtpark Rosenheim und auf den Trails im Käferwald – mitten in der Natur, direkt vor der Haustür.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📆</div>
+            <h3>April bis Oktober</h3>
+            <p>Die Saison läuft von April bis Oktober, mittwochs und freitags. Zwei kostenlose Schnupperstunden inklusive.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">💶</div>
+            <h3>Faire Beiträge</h3>
+            <p>€ 35 / Monat für das erste Kind, € 30 / Monat für Geschwister – inklusive Vereins- und Abteilungsbeitrag.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🤝</div>
+            <h3>Teil eines Vereins</h3>
+            <p>Als Teil von Trendsport TSV 1860 Rosenheim profitieren die Kids von Gemeinschaft, Events und Vereinsleben.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="section" aria-label="Anmeldung">
+      <div class="container" style="text-align: center;">
+        <h2>Bereit zum Einrollen?</h2>
+        <p style="max-width: 560px; margin: var(--space-4) auto var(--space-8);">
+          Zwei Schnupperstunden sind kostenfrei – einfach anmelden und ausprobieren.
+          Wir freuen uns auf deinen Trail Monkey!
+        </p>
+        <div class="hero-ctas" style="justify-content: center;">
+          <a href="pages/anmeldung.html" class="btn btn-primary">
+            <span class="btn-icon" aria-hidden="true">🚲</span>
+            Jetzt anmelden
+          </a>
+          <a href="pages/training.html" class="btn btn-outline">
+            Trainingszeiten ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== SUPPORTERS BAR ====== -->
+  <section class="supporters-bar" aria-label="Unsere Unterstützer">
+    <div class="container">
+      <p class="supporters-label">Mit freundlicher Unterstützung von</p>
+      <div class="supporters-grid">
+        <a class="supporter-item" href="https://www.sparkasse-ros.de" target="_blank" rel="noopener"
+           aria-label="Sparkasse Rosenheim-Bad Aibling">
+          <img src="assets/img/sparkasse.png" alt="Sparkasse Rosenheim-Bad Aibling">
+        </a>
+        <a class="supporter-item" href="https://www.rosenheim.de" target="_blank" rel="noopener"
+           aria-label="Stadt Rosenheim">
+          <img src="assets/img/stadt-rosenheim.png" alt="Stadt Rosenheim">
+        </a>
+        <a class="supporter-item" href="https://www.kommit.bike" target="_blank" rel="noopener"
+           aria-label="Kommit – ride together">
+          <img src="assets/img/kommit.png" alt="Kommit – ride together">
+        </a>
+        <a class="supporter-item" href="https://www.bikepark-samerberg.de" target="_blank" rel="noopener"
+           aria-label="Bikepark Samerberg">
+          <img src="assets/img/bikepark-samerberg.jpg" alt="Bikepark Samerberg">
+        </a>
+        <a class="supporter-item" href="#" target="_blank" rel="noopener"
+           aria-label="Happy Trails">
+          <img src="assets/img/happy-trails.png" alt="Happy Trails">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="pages/training.html">Training</a></li>
+          <li><a href="pages/team.html">Team</a></li>
+          <li><a href="pages/anmeldung.html">Anmeldung</a></li>
+          <li><a href="pages/galerie.html">Galerie</a></li>
+          <li><a href="pages/kontakt.html">Kontakt</a></li>
+          <li><a href="#" title="TODO: Datenschutzerklärung einfügen">Datenschutz</a></li>
+          <li><a href="#" title="TODO: Impressum einfügen">Impressum</a></li>
+          <li>
+            <a href="https://www.instagram.com/trailmonkeys.rosenheim"
+               target="_blank" rel="noopener"
+               aria-label="Instagram @trailmonkeys.rosenheim (öffnet in neuem Tab)">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer-copy">
+        &copy; Trail Monkeys Rosenheim &middot;
+        <a href="https://www.trendsport-rosenheim.de" target="_blank" rel="noopener"
+           style="color: rgba(255,255,255,0.45);">Trendsport TSV 1860 Rosenheim e.V.</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

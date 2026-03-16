@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unser Team – Trail Monkeys Rosenheim</title>
+  <meta name="description" content="Lern unsere Trainer kennen – die Menschen hinter den Trail Monkeys Rosenheim.">
+
+  <link rel="stylesheet" href="../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+
+  <style>
+    /* ---- Team page specific styles ---- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-8);
+      margin-top: var(--space-10);
+    }
+
+    .team-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition-slow), transform var(--transition-slow);
+      text-align: center;
+    }
+    .team-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .team-card-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: var(--color-light);
+    }
+
+    .team-card-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-mid) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      color: rgba(255,255,255,0.5);
+    }
+    .team-card-photo-placeholder .placeholder-icon {
+      font-size: 4rem;
+      line-height: 1;
+    }
+    .team-card-photo-placeholder p {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.4);
+      margin: 0;
+    }
+
+    .team-card-body {
+      padding: var(--space-6);
+    }
+    .team-card-body h3 {
+      font-size: var(--text-2xl);
+      font-weight: var(--fw-black);
+      margin-bottom: var(--space-1);
+      color: var(--color-text);
+    }
+    .team-card-role {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: var(--text-xs);
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-4);
+    }
+    .team-card-bio {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: var(--leading-loose);
+      margin-bottom: var(--space-4);
+    }
+    .team-card-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: var(--fw-medium);
+    }
+    .team-card-contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+  <input type="checkbox" id="nav-toggle" aria-hidden="true">
+
+  <!-- ====== HEADER / NAV ====== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <a class="nav-logo" href="../index.html" aria-label="Trail Monkeys Rosenheim – Startseite">
+        <img src="../assets/img/trail-monkeys-logo-transparent.png"
+             alt="Trail Monkeys Rosenheim Logo"
+             width="200" height="200">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Die Trail Monkeys</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="team.html" aria-current="page">Team</a></li>
+        <li><a href="anmeldung.html">Anmeldung</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <a class="nav-tsv-badge" href="https://tsv1860rosenheim.de/" target="_blank" rel="noopener"
+         aria-label="TSV 1860 Rosenheim e.V. (öffnet in neuem Tab)">
+        <span style="color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid rgba(255,255,255,0.3); padding: 4px 8px; border-radius: 4px;">TSV<br>1860</span>
+      </a>
+
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span><span></span><span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- ====== PAGE HERO ====== -->
+  <div class="page-hero">
+    <h1>Unser Team</h1>
+    <p>Die Trainer hinter den Trail Monkeys Rosenheim.</p>
+  </div>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container" style="max-width: 900px;">
+
+        <h2 id="team-heading" class="sr-only">Trainer</h2>
+
+        <div class="team-grid">
+
+          <!-- Trainer: Jonas Droste -->
+          <article class="team-card" aria-labelledby="trainer-jonas">
+
+            <!-- TODO: replace placeholder with real photo of Jonas
+                 Recommended: square format, min 600×600px
+                 <img src="../assets/img/trainer-jonas.jpg"
+                      alt="Jonas Droste – Trainer Trail Monkeys Rosenheim"
+                      class="team-card-photo"> -->
+            <div class="team-card-photo-placeholder" aria-hidden="true">
+              <span class="placeholder-icon">🚵</span>
+              <p>Foto folgt</p>
+            </div>
+
+            <div class="team-card-body">
+              <span class="team-card-role">Trainer</span>
+              <h3 id="trainer-jonas">Jonas Droste</h3>
+              <p class="team-card-bio">
+                <!-- TODO: add a short bio for Jonas -->
+                Jonas bringt Kindern spielerisch das Mountainbiken bei und ist mit Begeisterung
+                auf den Trails rund um Rosenheim unterwegs.
+                <span class="todo-badge">TODO</span> Bio ergänzen
+              </p>
+              <div class="team-card-contact">
+                <a href="mailto:jonas.droste@gmx.de" aria-label="E-Mail an Jonas Droste">
+                  <span aria-hidden="true">✉️</span>
+                  jonas.droste@gmx.de
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Trainer: Andy Rieger -->
+          <article class="team-card" aria-labelledby="trainer-andy">
+
+            <!-- TODO: replace placeholder with real photo of Andy
+                 <img src="../assets/img/trainer-andy.jpg"
+                      alt="Andy Rieger – Trainer Trail Monkeys Rosenheim"
+                      class="team-card-photo"> -->
+            <div class="team-card-photo-placeholder" aria-hidden="true">
+              <span class="placeholder-icon">🚵</span>
+              <p>Foto folgt</p>
+            </div>
+
+            <div class="team-card-body">
+              <span class="team-card-role">Trainer</span>
+              <h3 id="trainer-andy">Andy Rieger</h3>
+              <p class="team-card-bio">
+                <!-- TODO: add a short bio for Andy -->
+                Andy liebt den Dirtpark Rosenheim und gibt sein Wissen und seine Leidenschaft
+                fürs Mountainbiken gerne an die nächste Generation weiter.
+                <span class="todo-badge">TODO</span> Bio ergänzen
+              </p>
+              <div class="team-card-contact">
+                <a href="mailto:andyrieger@me.com" aria-label="E-Mail an Andy Rieger">
+                  <span aria-hidden="true">✉️</span>
+                  andyrieger@me.com
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- .team-grid -->
+
+        <!-- Join the team CTA -->
+        <div style="margin-top: var(--space-16); text-align: center; padding: var(--space-10) var(--space-6); background: var(--color-light); border-radius: var(--radius-lg);">
+          <p style="font-size: 2rem; margin-bottom: var(--space-4);" aria-hidden="true">🙋</p>
+          <h3 style="margin-bottom: var(--space-3);">Du willst mitmachen?</h3>
+          <p style="max-width: 500px; margin: 0 auto var(--space-6); color: var(--color-text-muted);">
+            Wir freuen uns immer über Verstärkung! Meld dich bei uns wenn du Lust hast,
+            Kinder beim Mountainbiken zu begleiten.
+          </p>
+          <a href="kontakt.html" class="btn btn-primary">
+            <span class="btn-icon" aria-hidden="true">✉️</span>
+            Kontakt aufnehmen
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== SUPPORTERS BAR ====== -->
+  <section class="supporters-bar" aria-label="Unsere Unterstützer">
+    <div class="container">
+      <p class="supporters-label">Mit freundlicher Unterstützung von</p>
+      <div class="supporters-grid">
+        <a class="supporter-item" href="https://www.sparkasse-ros.de" target="_blank" rel="noopener"
+           aria-label="Sparkasse Rosenheim-Bad Aibling">
+          <img src="../assets/img/sparkasse.png" alt="Sparkasse Rosenheim-Bad Aibling">
+        </a>
+        <a class="supporter-item" href="https://www.rosenheim.de" target="_blank" rel="noopener"
+           aria-label="Stadt Rosenheim">
+          <img src="../assets/img/stadt-rosenheim.png" alt="Stadt Rosenheim">
+        </a>
+        <a class="supporter-item" href="https://www.kommit.bike" target="_blank" rel="noopener"
+           aria-label="Kommit – ride together">
+          <img src="../assets/img/kommit.png" alt="Kommit – ride together">
+        </a>
+        <a class="supporter-item" href="https://www.bikepark-samerberg.de" target="_blank" rel="noopener"
+           aria-label="Bikepark Samerberg">
+          <img src="../assets/img/bikepark-samerberg.jpg" alt="Bikepark Samerberg">
+        </a>
+        <a class="supporter-item" href="#" target="_blank" rel="noopener"
+           aria-label="Happy Trails">
+          <img src="../assets/img/happy-trails.png" alt="Happy Trails">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="../index.html">Startseite</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="anmeldung.html">Anmeldung</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#" title="TODO: Datenschutzerklärung einfügen">Datenschutz</a></li>
+          <li><a href="#" title="TODO: Impressum einfügen">Impressum</a></li>
+          <li>
+            <a href="https://www.instagram.com/trailmonkeys.rosenheim"
+               target="_blank" rel="noopener"
+               aria-label="Instagram @trailmonkeys.rosenheim (öffnet in neuem Tab)">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer-copy">
+        &copy; Trail Monkeys Rosenheim &middot;
+        <a href="https://www.trendsport-rosenheim.de" target="_blank" rel="noopener"
+           style="color: rgba(255,255,255,0.45);">Trendsport TSV 1860 Rosenheim e.V.</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

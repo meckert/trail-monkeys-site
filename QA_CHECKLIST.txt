@@ -1,0 +1,143 @@
+Trail Monkeys Rosenheim — QA Checklist
+=======================================
+
+Run these checks after every significant change and before publishing.
+Start a local server first: python3 -m http.server 8000
+
+
+GENERAL (all pages)
+-------------------
+
+[ ] Page loads without browser console errors (check DevTools > Console)
+[ ] Page loads without CSS errors (check DevTools > Network)
+[ ] <title> tag is present and unique per page
+[ ] <meta description> is present and under 160 characters
+[ ] Only ONE <h1> per page
+[ ] Logo is visible in the nav bar
+[ ] TSV badge is visible in the nav bar (top right)
+[ ] All nav links are clickable and go to the correct page
+[ ] Current page is marked with aria-current="page" in nav
+[ ] Skip-to-content link appears on Tab key press
+[ ] Footer links all work (no 404s)
+[ ] Footer copyright text is present
+[ ] No broken images (all imgs show content or meaningful alt text)
+
+
+RESPONSIVE / MOBILE
+-------------------
+
+[ ] Resize to 360px width — content remains readable, no horizontal scroll
+[ ] Nav collapses to hamburger menu at mobile width
+[ ] Hamburger menu opens and closes correctly on tap/click
+[ ] Hero text is readable at all sizes
+[ ] CTA buttons are tap-friendly (min 44x44px touch target)
+[ ] Gallery grid collapses to single column on mobile
+[ ] Training group cards stack vertically on mobile
+
+
+ACCESSIBILITY
+-------------
+
+[ ] Tab through entire page — focus outline is always visible
+[ ] Tab order is logical (matches visual order)
+[ ] All images have meaningful alt text (or alt="" for decorative)
+[ ] Color contrast ratio ≥ 4.5:1 for body text (check with browser dev tools)
+[ ] CTA buttons are keyboard-activated (Enter/Space)
+[ ] Gallery items can be opened via keyboard (Enter/Space)
+[ ] Lightbox: ESC key closes lightbox
+[ ] Lightbox: arrow keys navigate prev/next
+[ ] Lightbox: focus is trapped inside lightbox while open
+[ ] Lightbox: focus returns to trigger element on close
+[ ] aria-current="page" set on active nav link
+
+
+INDEX.HTML
+----------
+
+[ ] Hero section is full viewport height
+[ ] Logo visible in hero (top left on desktop, centered on mobile)
+[ ] H1 "Trail Monkeys Rosenheim" is visible
+[ ] Subtitle "Mountainbike Training für Kinder" is visible
+[ ] Tagline text is visible
+[ ] "Jetzt anmelden" button (red) links to anmeldung.html
+[ ] "Trainingszeiten" button (green) links to training.html
+[ ] "Was sind die Trail Monkeys?" section is visible below hero
+[ ] Feature cards grid renders correctly
+[ ] JSON-LD block is present in page source (inspect > Elements)
+
+
+TRAINING.HTML
+-------------
+
+[ ] Two training group cards are visible
+[ ] "Gruppe 1" (ages 4-6) and "Gruppe 2" (ages 7-12) headings
+[ ] Training times show (TODO badge is acceptable for prototype)
+[ ] Season info box (April–Oktober) is present
+[ ] Treffpunkt section with address is visible
+[ ] Google Maps link opens correctly in new tab
+[ ] Costs section shows €35 and €30 pricing
+[ ] "Zwei Schnupperstunden" note is present
+[ ] Trainer names and email links are visible
+[ ] Email links (mailto:) work
+
+
+ANMELDUNG.HTML
+--------------
+
+[ ] Google Form iframe is present (placeholder iframe is acceptable)
+[ ] Form fallback link is visible below iframe
+[ ] Privacy / Datenschutz note is present below form
+[ ] Email fallback links to trainers are present
+
+
+GALERIE.HTML
+------------
+
+[ ] Gallery grid shows placeholder tiles (or real images if added)
+[ ] Clicking a tile opens the lightbox
+[ ] Lightbox shows image, caption, and counter
+[ ] Prev/Next buttons work
+[ ] ESC key closes lightbox
+[ ] Close button (×) closes lightbox
+[ ] Clicking outside lightbox image (on dark overlay) closes lightbox
+[ ] Lightbox is not visible on page load
+
+
+KONTAKT.HTML
+------------
+
+[ ] Trainer names and emails are visible
+[ ] Jonas Droste: jonas.droste@gmx.de
+[ ] Andy Rieger: andyrieger@me.com
+[ ] Verein address visible (Jahnstraße 25, 83022 Rosenheim)
+[ ] Phone link works: 08031 12639
+[ ] trendsport-rosenheim.de link opens in new tab
+[ ] tsv1860rosenheim.de link opens in new tab
+[ ] Instagram link (@trailmonkeys.rosenheim) opens in new tab
+[ ] Dirtpark address and Google Maps link visible
+
+
+W3C VALIDATION (optional but recommended)
+-----------------------------------------
+
+[ ] Paste each page's source at https://validator.w3.org/#validate_by_input
+[ ] Zero errors (warnings are acceptable)
+
+
+PERFORMANCE (optional)
+-----------------------
+
+[ ] Hero section does not shift/flicker on load
+[ ] Images use loading="lazy" where appropriate
+[ ] No unused large files in assets/
+
+
+BEFORE PUBLISHING
+-----------------
+
+[ ] All [TODO] placeholders replaced or documented
+[ ] Google Form URL inserted in anmeldung.html
+[ ] Real hero and gallery images added
+[ ] Datenschutz and Impressum pages created
+[ ] JSON-LD URL updated to final domain
+[ ] Remove todo-badge elements or hide with CSS
