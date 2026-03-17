@@ -48,41 +48,41 @@
   <!-- ====== PAGE HERO ====== -->
   <div class="page-hero">
     <h1>Anmeldung</h1>
-    <p>Zwei Schnupperstunden kostenfrei – einfach Formular ausfüllen und loslegen.</p>
+    <p>Schnuppern oder direkt einschreiben – in zwei Schritten dabei.</p>
   </div>
 
   <!-- ====== MAIN ====== -->
   <main id="main-content">
 
-    <section class="section" aria-labelledby="anmeldung-heading">
+    <!-- Step 1: Schnupperkurs -->
+    <section class="section" aria-labelledby="schnupper-heading">
       <div class="container" style="max-width: 860px;">
 
-        <h2 id="anmeldung-heading" class="sr-only">Anmeldeformular</h2>
+        <h2 id="schnupper-heading">Schritt 1 – Schnupperkurs anmelden</h2>
+        <p style="margin-bottom: var(--space-6);">
+          Bevor ihr euch fest anmeldet, könnt ihr <strong>zweimal kostenlos schnuppern</strong>.
+          Füllt einfach das Formular aus – die Trainer melden sich bei euch.
+        </p>
 
-        <!-- Info before form -->
         <div class="info-box" style="margin-bottom: var(--space-8);">
-          <h4>Vor der Anmeldung</h4>
+          <h4>Voraussetzungen</h4>
           <ul>
-            <li>Kinder zwischen <strong>4 und 12 Jahren</strong> können sich anmelden.</li>
-            <li><strong>Zwei Schnupperstunden</strong> sind vollständig kostenfrei – danach greifen die regulären Monatsbeiträge.</li>
-            <li>Nach dem Absenden des Formulars melden sich die Trainer direkt bei euch.</li>
-            <li>Aktuelle Trainingszeiten und Treffpunkt findet ihr auf der <a href="training.html">Trainingsseite</a>.</li>
+            <li>Kinder zwischen <strong>4 und 12 Jahren</strong></li>
+            <li>Zwei Schnupperstunden vollständig kostenfrei</li>
+            <li>Aktuelle Trainingszeiten auf der <a href="training.html">Trainingsseite</a></li>
           </ul>
         </div>
 
-        <!-- Google Form embed -->
         <div class="form-wrapper">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdhIBG4myQT-IL3MRHv52RoM02QX9F_ZxXS1oSGUiQuOIY-Pw/viewform?embedded=true"
-            title="Anmeldeformular Trail Monkeys Rosenheim"
+            title="Schnupperkurs anmelden – Trail Monkeys Rosenheim"
             allowfullscreen
             loading="lazy"
-            aria-label="Anmeldeformular (Google Forms)"
+            aria-label="Schnupperkurs-Anmeldeformular (Google Forms)"
             style="display:block;">
             Dein Browser unterstützt keine eingebetteten Formulare.
           </iframe>
-
-          <!-- Fallback link directly below iframe -->
           <div class="form-fallback" role="note">
             <p>
               Formular nicht sichtbar?
@@ -94,8 +94,43 @@
           </div>
         </div>
 
-        <!-- Privacy note (required for GDPR / German law) -->
-        <p class="form-privacy-note" role="note">
+      </div>
+    </section>
+
+    <!-- Step 2: Vereinsanmeldung -->
+    <section class="section section--alt" aria-labelledby="verein-heading">
+      <div class="container" style="max-width: 860px;">
+
+        <h2 id="verein-heading">Schritt 2 – Offiziell beim Verein anmelden</h2>
+        <p style="margin-bottom: var(--space-6);">
+          Nach den Schnupperstunden erfolgt die offizielle Anmeldung beim
+          <strong>Trendsport TSV 1860 Rosenheim e.V.</strong> über dieses Formular.
+          Damit ist euer Kind als Vereinsmitglied eingeschrieben und der Monatsbeitrag wird aktiv.
+        </p>
+
+        <div class="form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdUBWMc3muVTrMy9oaLUEVSFuBmrTfrcljo244VuG_PJSbtRA/viewform?embedded=true"
+            title="Vereinsanmeldung TSV 1860 Rosenheim"
+            allowfullscreen
+            loading="lazy"
+            aria-label="Vereins-Anmeldeformular (Google Forms)"
+            style="display:block;">
+            Dein Browser unterstützt keine eingebetteten Formulare.
+          </iframe>
+          <div class="form-fallback" role="note">
+            <p>
+              Formular nicht sichtbar?
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUBWMc3muVTrMy9oaLUEVSFuBmrTfrcljo244VuG_PJSbtRA/viewform"
+                 target="_blank" rel="noopener">
+                Formular direkt in Google Forms öffnen ↗
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Privacy note -->
+        <p class="form-privacy-note" role="note" style="margin-top: var(--space-6);">
           <strong>Datenschutzhinweis:</strong>
           Die Anmeldung erfolgt über Google Forms; personenbezogene Daten werden laut unserer
           <a href="#" title="TODO: Link zur Datenschutzerklärung einfügen">Datenschutzerklärung</a>
@@ -106,7 +141,7 @@
 
         <!-- Contact fallback -->
         <div style="margin-top: var(--space-10); text-align: center;">
-          <p>Oder meldet euch direkt per E-Mail:</p>
+          <p>Fragen? Meldet euch direkt per E-Mail:</p>
           <p style="margin-top: var(--space-3);">
             <a href="mailto:trailmonkeys.rosenheim@gmail.com" class="btn btn-outline" style="margin: var(--space-2);">
               <span aria-hidden="true">✉️</span> trailmonkeys.rosenheim@gmail.com
