@@ -6,6 +6,55 @@
   <title>Training – Trail Monkeys Rosenheim</title>
   <meta name="description" content="Trainingszeiten, Gruppen, Treffpunkt und alle Infos zum Mountainbike-Kurs der Trail Monkeys Rosenheim für Kinder von 4 bis 12 Jahren.">
 
+  <style>
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-6);
+      margin-top: var(--space-8);
+    }
+    .schedule-day {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .schedule-day-header {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: var(--space-4) var(--space-6);
+      font-size: var(--text-xl);
+      font-weight: var(--fw-black);
+      letter-spacing: 0.03em;
+    }
+    .schedule-slot {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-5) var(--space-6);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .schedule-slot:last-child { border-bottom: none; }
+    .schedule-slot-time {
+      font-size: var(--text-lg);
+      font-weight: var(--fw-black);
+      color: var(--color-primary);
+      white-space: nowrap;
+      min-width: 120px;
+    }
+    .schedule-slot-group {
+      font-size: var(--text-base);
+      font-weight: var(--fw-medium);
+      color: var(--color-text);
+    }
+    .schedule-slot-age {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+  </style>
+
   <link rel="stylesheet" href="../assets/css/design-tokens.css">
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
@@ -20,7 +69,7 @@
   <header class="site-header" role="banner">
     <nav class="nav-inner" aria-label="Hauptnavigation">
       <a class="nav-logo" href="../index.html" aria-label="Trail Monkeys Rosenheim – Startseite">
-        <img src="../assets/img/trail-monkeys-logo-transparent.png"
+        <img src="../assets/img/trail-monkeys-logo-transparent.webp"
              alt="Trail Monkeys Rosenheim Logo"
              width="48" height="48">
       </a>
@@ -48,7 +97,7 @@
   <!-- ====== PAGE HERO ====== -->
   <div class="page-hero">
     <h1>Training</h1>
-    <p>Zwei Gruppen, faire Kosten, und jede Menge Spaß auf dem Trail.</p>
+    <p>Mittwochs und freitags, zwei Altersgruppen – faire Kosten, jede Menge Spaß.</p>
   </div>
 
   <!-- ====== MAIN ====== -->
@@ -57,105 +106,51 @@
     <!-- Training groups -->
     <section class="section" aria-labelledby="groups-heading">
       <div class="container">
-        <h2 id="groups-heading">Trainingsgruppen</h2>
-        <p>Je nach Alter und Können teilen sich die Trail Monkeys in zwei Gruppen auf.
-           Jede Gruppe hat eigene Trainingszeiten, damit alle Kinder optimal gefördert werden.</p>
+        <h2 id="groups-heading">Trainingszeiten</h2>
+        <p>Wir trainieren <strong>mittwochs und freitags</strong> in zwei Altersgruppen.
+           Jede Gruppe hat ihren eigenen Slot – so bekommt jedes Kind die passende Betreuung.</p>
 
-        <div class="info-cols" style="margin-top: var(--space-8);">
+        <div class="schedule-grid">
 
-          <!-- Group 1: Ages 4-6 -->
-          <article class="training-group" aria-labelledby="group1-heading">
-            <div class="training-group-header">
-              <span class="group-label">Gruppe 1</span>
-              <h3 id="group1-heading">Kleine Monkeys (4–6 Jahre)</h3>
+          <!-- Mittwoch -->
+          <div class="schedule-day">
+            <div class="schedule-day-header">Mittwoch</div>
+            <div class="schedule-slot">
+              <div class="schedule-slot-time">16:00 – 17:00</div>
+              <div>
+                <div class="schedule-slot-group">Kleine Monkeys</div>
+                <div class="schedule-slot-age">4 – 6 Jahre</div>
+              </div>
             </div>
-            <div class="training-group-body">
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">📅</span>
-                <div>
-                  <span class="detail-label">Trainingstage</span>
-                  <p class="detail-value">Mittwoch &amp; Freitag</p>
-                </div>
+            <div class="schedule-slot">
+              <div class="schedule-slot-time">17:00 – 18:30</div>
+              <div>
+                <div class="schedule-slot-group">Trail Monkeys</div>
+                <div class="schedule-slot-age">7 – 12 Jahre</div>
               </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">🕐</span>
-                <div>
-                  <span class="detail-label">Uhrzeiten</span>
-                  <p class="detail-value">
-                    <!-- TODO: insert exact training times for ages 4-6 -->
-                    <span class="todo-badge">TODO</span> Bitte genaue Zeiten eintragen
-                  </p>
-                </div>
-              </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">👦</span>
-                <div>
-                  <span class="detail-label">Altersgruppe</span>
-                  <p class="detail-value">4 bis 6 Jahre</p>
-                </div>
-              </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">🚲</span>
-                <div>
-                  <span class="detail-label">Schwerpunkt</span>
-                  <p class="detail-value">Gleichgewicht, erste Trails, spielerisches Fahren</p>
-                </div>
-              </div>
-
             </div>
-          </article>
+          </div>
 
-          <!-- Group 2: Ages 7-12 -->
-          <article class="training-group" aria-labelledby="group2-heading">
-            <div class="training-group-header">
-              <span class="group-label">Gruppe 2</span>
-              <h3 id="group2-heading">Trail Monkeys (7–12 Jahre)</h3>
+          <!-- Freitag -->
+          <div class="schedule-day">
+            <div class="schedule-day-header">Freitag</div>
+            <div class="schedule-slot">
+              <div class="schedule-slot-time">15:00 – 16:00</div>
+              <div>
+                <div class="schedule-slot-group">Kleine Monkeys</div>
+                <div class="schedule-slot-age">4 – 6 Jahre</div>
+              </div>
             </div>
-            <div class="training-group-body">
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">📅</span>
-                <div>
-                  <span class="detail-label">Trainingstage</span>
-                  <p class="detail-value">Mittwoch &amp; Freitag</p>
-                </div>
+            <div class="schedule-slot">
+              <div class="schedule-slot-time">16:00 – 17:30</div>
+              <div>
+                <div class="schedule-slot-group">Trail Monkeys</div>
+                <div class="schedule-slot-age">7 – 12 Jahre</div>
               </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">🕐</span>
-                <div>
-                  <span class="detail-label">Uhrzeiten</span>
-                  <p class="detail-value">
-                    <!-- TODO: insert exact training times for ages 7-12 -->
-                    <span class="todo-badge">TODO</span> Bitte genaue Zeiten eintragen
-                  </p>
-                </div>
-              </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">👦</span>
-                <div>
-                  <span class="detail-label">Altersgruppe</span>
-                  <p class="detail-value">7 bis 12 Jahre</p>
-                </div>
-              </div>
-
-              <div class="training-detail-row">
-                <span class="detail-icon" aria-hidden="true">🚲</span>
-                <div>
-                  <span class="detail-label">Schwerpunkt</span>
-                  <p class="detail-value">Technik, Trails im Käferwald, Jumps am Dirtpark</p>
-                </div>
-              </div>
-
             </div>
-          </article>
+          </div>
 
-        </div><!-- .info-cols -->
+        </div><!-- .schedule-grid -->
 
         <!-- Season note -->
         <div class="info-box" style="margin-top: var(--space-8);">
@@ -198,15 +193,13 @@
           </div>
 
           <div>
-            <!-- Map embed placeholder -->
-            <div style="width:100%; height: 260px; border-radius: var(--radius-lg); overflow: hidden; background: var(--color-light); border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: var(--space-2); color: var(--color-text-muted);">
-              <span style="font-size: 2.5rem;" aria-hidden="true">🗺️</span>
-              <p style="font-size: var(--text-sm); margin: 0;">Lortzingstraße 15, 83024 Rosenheim</p>
-              <!-- TODO: optionally replace with an OpenStreetMap iframe embed for local-only use:
-                   <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=12.11,47.85,12.15,47.87&marker=47.856,12.130"
-                     style="width:100%;height:260px;border:none;" title="Karte Dirtpark Rosenheim"></iframe>
-              -->
-            </div>
+            <a href="https://maps.google.com/?q=Lortzingstra%C3%9Fe+15,+83024+Rosenheim"
+               target="_blank" rel="noopener" aria-label="Dirtpark Rosenheim in Google Maps öffnen">
+              <img src="../assets/img/dirtpark-map.png"
+                   alt="Karte: Dirtpark Rosenheim, Lortzingstraße 15"
+                   loading="lazy"
+                   style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow); display: block;">
+            </a>
           </div>
         </div>
 
@@ -292,17 +285,18 @@
             <div class="trainer-avatar" aria-hidden="true">J</div>
             <div class="trainer-info">
               <strong>Jonas Droste</strong>
-              <a href="mailto:jonas.droste@gmx.de">jonas.droste@gmx.de</a>
             </div>
           </div>
           <div class="trainer-card">
             <div class="trainer-avatar" aria-hidden="true">A</div>
             <div class="trainer-info">
               <strong>Andy Rieger</strong>
-              <a href="mailto:andyrieger@me.com">andyrieger@me.com</a>
             </div>
           </div>
         </div>
+        <p style="margin-top: var(--space-6); text-align: center;">
+          <a href="mailto:trailmonkeys.rosenheim@gmail.com">trailmonkeys.rosenheim@gmail.com</a>
+        </p>
 
         <div style="margin-top: var(--space-8); text-align: center;">
           <a href="anmeldung.html" class="btn btn-primary">
