@@ -33,8 +33,7 @@
     width: 100%;
     justify-content: center;
   }
-  /* Only expand to full width when inside a flex CTA row */
-  .hero-ctas .btn,
+  /* Keep auto width for standalone buttons inside content sections */
   .section .btn:not(.btn-outline + .btn-outline) {
     width: auto;
   }

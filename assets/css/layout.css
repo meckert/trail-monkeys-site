@@ -270,7 +270,7 @@
 
 @media (max-width: 480px) {
   .hero-logo img { height: 200px; }
-  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
 }
 
 
